@@ -1,3 +1,5 @@
+A simple calculator web application built with React, bootstrapped using Create React App. It demonstrates the essential features of a calculator, such as basic arithmetic operations, and serves as a beginner-friendly project for learning React concepts and application structure. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
