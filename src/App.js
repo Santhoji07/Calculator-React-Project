@@ -1,5 +1,4 @@
 import './App.css';
-import Greet from './greet'; 
 import React, { useState } from 'react';
 //javascript XML 
 //function App() {
@@ -28,7 +27,7 @@ import React, { useState } from 'react';
   
 }*/
 
-function App() {
+/*function App() {
   const names=['a','b','c','d','e'];
   return(
     <ul>
@@ -40,9 +39,78 @@ function App() {
       }
     </ul>
   )
+}*/
+
+/*function App() { 
+const [num1, setNum1] = useState('');
+const [num2, setNum2] = useState('');
+const [result, setResult] = useState(null);
+
+function handleOperation(op) {
+  const a = parseFloat(num1);
+  const b = parseFloat(num2);
+  if (isNaN(a) || isNaN(b)) {
+    alert('Please enter valid numbers');
+    return;
+  }
+  let res;
+  if (op === '+') {
+    res = a + b;
+  } else if (op === '-') {
+    res = a - b;
+  } else if (op === '*') {
+    res = a * b;
+  } else if (op === '/') {
+    if (b === 0) {
+      alert('Cannot divide by zero');
+      return;
+    }
+    res = a / b;
+  } else {
+    return;
+  }
+  setResult(res);
+  alert(`Operation ${op} performed!`);
 }
 
+return (
+  <div>
+    <h2>Simple Calculator</h2>
+    <input
+      type="number"
+      value={num1}
+      onChange={e => setNum1(e.target.value)}
+      placeholder="First number"
+    />
+    <input
+      type="number"
+      value={num2}
+      onChange={e => setNum2(e.target.value)}
+      placeholder="Second number"
+    />
+    <div>
+      <button onClick={() => handleOperation('+')}>+</button>
+      <button onClick={() => handleOperation('-')}>-</button>
+      <button onClick={() => handleOperation('*')}>*</button>
+      <button onClick={() => handleOperation('/')}>/</button>
+    </div>
+    {result !== null && (
+      <h3>Result: {result}</h3>
+    )}
+  </div>
+);
+}
+*/
 
+import Calc from './Calc.js';
 
+function App(){
+  return(
+     <div><h2>Simple Calculator</h2>
+   <Calc />
+  </div>
+  );
+ 
+}
 
 export default App;
